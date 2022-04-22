@@ -1,0 +1,34 @@
+{
+  "name": "prueba-tecnica-cuc-deiber-olivares",
+  "version": "1.0.0",
+  "description": "Prueba técnica utilizando Node, Express y MYSQL",
+  "main": "index.js",
+  "directories": {
+    "doc": "public/docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dolivare5/prueba-tecnica-cuc.git"
+  },
+  "author": "Deiber Duban Olivares Olivares",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dolivare5/prueba-tecnica-cuc/issues"
+  },
+  "homepage": "https://github.com/dolivare5/prueba-tecnica-cuc#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0",
+    "mysql2": "^2.3.3",
+    "pug": "^3.0.2",
+    "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
