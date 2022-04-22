@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" )
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        title #{nombrePagina}
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="/css/normalize.css")
+        link(rel="stylesheet" href="/css/app.css")
+    body
+        header.contenedor
+            div.barra
+                h1 CRUD con MYSQL, Node, Express y JS
+        div.sidebar
+            img(src="/img/logo.png" alt="Logo CUC" class="logo")
+            div.enlaces
+                a(href="/docentes" class="enlace") Docentes
+                a(href="#" class="enlace") Estudiantes
+                a(href="#" class="enlace") Programas Academicos
+                a(href="#" class="enlace") Asignaturas
+                a(href="#" class="enlace") Horarios
+                a(href="#" class="enlace") Salones
+                a(href="#" class="enlace") Bloques
+        block contenido

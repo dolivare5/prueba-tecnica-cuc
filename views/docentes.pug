@@ -1,0 +1,32 @@
+extends layout
+block contenido
+    div.contenedor
+        .contenido-principal
+            h1 #{nombrePagina}
+
+            form.agregar-docente(action="/docentes" method="POST")
+                .campos
+                    .campo
+                        label(for="nombres") Nombres:
+                        input(type="text" id="nombres" name="nombres" placeholder="Escribe aquí el nombre")
+                    .campo
+                        label(for="apellidos") Apellidos:
+                        input(type="text" id="apellidos" name="apellidos" placeholder="Escribe aquílos apellidos")
+                    .campo
+                        label(for="identificacion") Identificacion:
+                        input(type="text" id="identificacion" name="identificacion" placeholder="Escribe aquí la identificación")
+
+                    .campo
+                        label(for="correo") Correo:
+                        input(type="email" id="correo" name="correo" placeholder="Escribe aquí el correo")
+
+                .campo.enviar-formulario
+                    input(type="submit" value="Registrar Docente" class="boton-enviar")
+
+
+            if errores
+                each error in errores
+                    .alerta=error.texto
+
+
+

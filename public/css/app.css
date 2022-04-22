@@ -1,0 +1,134 @@
+
+h1{
+    text-align: center;
+}
+
+body{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+
+.contenedor{
+    width: calc(100% - 200px);
+    padding-left: 200px;
+}
+
+.barra {
+    padding: 1rem;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: #151719;
+    transition: all 500ms linear;
+}
+
+.enlaces{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .enlaces .enlace {
+    text-decoration: none;
+    color: rgba(230, 230, 230, .9);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, .3);
+    text-align: center;
+}
+
+.sidebar .enlaces .enlace:hover{
+    cursor: pointer;
+}
+
+.logo {
+    border-radius: 50%;
+    display:block;
+    margin:auto;
+}
+
+.sdebar .toggle-btn span {
+    display: block;
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+    border: 3px solid #000;
+}
+
+img{
+    max-height: 160px;
+}
+
+.tabla{
+    padding-left: 456px;
+    padding-top: 80px;
+}
+
+ul{
+    padding-inline-start: 0;
+}
+
+.agregar-docente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campos{
+    display: flex;
+    align-items: center;
+}
+
+.campo{
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.campo:last-of-type{
+    margin-right: 0;
+}
+
+.campo label{
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.campo input{
+    width: 200px;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 10px 30px;
+    border: 2px solid #151719;
+    border-radius: 15px;
+}
+
+.agregar-docente .boton-enviar{
+    width: unset;
+    background-color: RGB(219, 184, 29);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    padding: 15px 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.alerta {
+    padding: .5rem;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 900;
+    max-width: 300px;
+    margin: 0 auto 1rem auto;
+    text-transform: uppercase;
+}
