@@ -8,8 +8,10 @@ html(lang="en")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet")
+        link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css')
         link(rel="stylesheet" href="/css/normalize.css")
         link(rel="stylesheet" href="/css/app.css")
+        link(rel="stylesheet" href="/css/style.css")
     body
         header.contenedor
             div.barra
@@ -25,3 +27,5 @@ html(lang="en")
                 a(href="#" class="enlace") Salones
                 a(href="#" class="enlace") Bloques
         block contenido
+        script(src="./js/index.js")
+        pre= vardump(docentes)

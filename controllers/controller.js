@@ -4,19 +4,26 @@
 
 const Docentes = require('../models/Docentes')
 
-exports.PruebaHome = (req, res) => {
+exports.PruebaHome = async (req, res) => {
+    const docentes = await Docentes.findAll();
     res.render('index', {
-        nombrePagina: 'Home'
+        nombrePagina: 'Home',
+        docentes,
+        nombreBoton: 'Registrar Docente'
     });
 }
 
-exports.docentes = (req, res) => {
+exports.docentes = async (req, res) => {
+    const docentes = await Docentes.findAll();
     res.render('docentes', {
-        nombrePagina: 'Docentes'
+        nombrePagina: 'Docentes',
+        docentes: docentes,
+        nombreBoton: 'Registrar Docente'
     })
 }
 
 exports.nuevoDocente =  async(req, res) =>{
+
     // Enviar a la consola lo que el usuario escriba
     //console.log(req.body);
 
@@ -35,7 +42,7 @@ exports.nuevoDocente =  async(req, res) =>{
     } else{
         // Si hay errores se procede a insertar datos en la bd
         const docente = await Docentes.create({  Profe_Nombres: nombres, Profe_Apellidos: apellidos, Profe_Identificacion: identificacion, Profe_Correo: correo})
-        res.redirect('/////')
+        res.redirect('/')
     }
 
 }

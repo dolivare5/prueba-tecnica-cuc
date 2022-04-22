@@ -3,3 +3,22 @@ block contenido
     div.contenedor
         .contenido-principal
             h1 #{nombrePagina}
+            table.tabla
+                thead.tabla__head
+                    tr
+                        th.tabla__th Nombres
+                    tr
+                        th.tabla__th Apellidos
+                    tr
+                        th.tabla__th Identificacion
+                    tr
+                        th.tabla__th Correo
+                tbody.tabla__tbody
+                    if(docentes.length)
+                        each docente in docentes
+                            tr.tabla__tr
+                                td.tabla__td docente.nombres
+                                td.tabla__td docente.apellidos
+                                td.tabla__td docente.identificacion
+                                td.tabla__td docente.correo
+

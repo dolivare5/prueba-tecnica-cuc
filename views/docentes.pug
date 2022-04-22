@@ -3,6 +3,39 @@ block contenido
     div.contenedor
         .contenido-principal
             h1 #{nombrePagina}
+            .container
+                .row
+                    .col-md-12
+                        .table-wrap
+                            table.table
+                                thead.thead-primary
+                                    tr
+                                        th#columna1 Código
+                                        th#columna2 Nombres
+                                        th#columna3 Apellidos
+                                        th#columna4 N° de identificación
+                                        th#columna5 Correo
+                                        th#columna6 Modificar
+                                        th#columna7 Eliminar
+                                tbody
+                                    if(docentes.length)
+                                        each docente in docentes
+                                            tr.tabla__tr
+                                                td(class="tabla__td")= docente.Profe_ID
+                                                td(class="tabla__td")= docente.Profe_Nombres
+                                                td(class="tabla__td")=  docente.Profe_Apellidos
+                                                td(class="tabla__td")= docente.Profe_Identificacion
+                                                td(class="tabla__td")=  docente.Profe_Correo
+                                                td.tabla__td
+                                                    a(href="#" class="btn-editar")
+                                                        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16")
+                                                            path(d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001z")
+
+                                                td.tabla__td
+                                                    a(href="#" class="btn-eliminar")
+                                                        svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16")
+                                                            path(fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z")
+                                                            path(fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z")
 
             form.agregar-docente(action="/docentes" method="POST")
                 .campos
@@ -21,12 +54,15 @@ block contenido
                         input(type="email" id="correo" name="correo" placeholder="Escribe aquí el correo")
 
                 .campo.enviar-formulario
-                    input(type="submit" value="Registrar Docente" class="boton-enviar")
+                    input(type="submit" value= `${nombreBoton}` class="boton-enviar")
 
 
             if errores
                 each error in errores
                     .alerta=error.texto
+
+
+
 
 
 

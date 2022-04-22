@@ -132,3 +132,19 @@ ul{
     margin: 0 auto 1rem auto;
     text-transform: uppercase;
 }
+#columna1, #columna2, #columna3, #columna4 {
+    display:table-cell; !important;
+    width: 25% !important;
+}
+
+.table-wrap {
+    overflow-x: hidden !important;
+}
+
+pre{
+    margin-left: 230px;
+}
+
+.tabla__td a{
+    color: #151719;
+}
