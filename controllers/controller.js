@@ -28,7 +28,12 @@ exports.nuevoDocente =  async(req, res) =>{
     //console.log(req.body);
 
     //Validar que tengamos algo en los inputs
-    const { nombres, apellidos,  identificacion, correo} = req.body;
+    let { nombres, apellidos,  identificacion, correo} = req.body;
+    nombres = nombres.toUpperCase()
+    apellidos = apellidos.toUpperCase()
+    identificacion = identificacion.toUpperCase()
+    correo = correo.toUpperCase()
+
     let errores = [];
     if(!nombres || !apellidos || !identificacion || !correo){
         errores.push({'texto': 'Todos los campos son obligatorios'})
@@ -41,7 +46,8 @@ exports.nuevoDocente =  async(req, res) =>{
         })
     } else{
         // Si hay errores se procede a insertar datos en la bd
-        const docente = await Docentes.create({  Profe_Nombres: nombres, Profe_Apellidos: apellidos, Profe_Identificacion: identificacion, Profe_Correo: correo})
+        console.log(nombres.toUpperCase())
+        await Docentes.create({  Profe_Nombres:  nombres, Profe_Apellidos: apellidos, Profe_Identificacion: identificacion, Profe_Correo: correo})
         res.redirect('/')
     }
 
